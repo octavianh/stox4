@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ks-Rs-vXh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Portfolio View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PortfolioViewController" customModule="CashStock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="It1-dB-py2">
+                                <rect key="frame" x="0.0" y="140" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmj-ix-mTN">
+                                        <rect key="frame" x="20" y="20" width="374" height="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fmj-ix-mTN" secondAttribute="trailing" constant="20" symbolic="YES" id="3ax-o9-3bl"/>
+                                    <constraint firstAttribute="bottom" secondItem="fmj-ix-mTN" secondAttribute="bottom" constant="20" symbolic="YES" id="6Ae-UX-HTj"/>
+                                    <constraint firstItem="fmj-ix-mTN" firstAttribute="leading" secondItem="It1-dB-py2" secondAttribute="leading" constant="20" symbolic="YES" id="Ax2-CA-GbV"/>
+                                    <constraint firstItem="fmj-ix-mTN" firstAttribute="top" secondItem="It1-dB-py2" secondAttribute="top" constant="20" symbolic="YES" id="BKz-qv-NXm"/>
+                                    <constraint firstAttribute="height" constant="50" id="uck-CC-amy"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PWr-eM-9up">
+                                <rect key="frame" x="0.0" y="190" width="414" height="672"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="It1-dB-py2" secondAttribute="trailing" id="D5V-XB-BS6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PWr-eM-9up" secondAttribute="trailing" id="Hbr-MV-ICl"/>
+                            <constraint firstItem="It1-dB-py2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RQb-LX-cBe"/>
+                            <constraint firstItem="It1-dB-py2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XT7-6N-yap"/>
+                            <constraint firstItem="PWr-eM-9up" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="na0-XZ-GZh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PWr-eM-9up" secondAttribute="bottom" id="qCL-AK-3fH"/>
+                            <constraint firstItem="It1-dB-py2" firstAttribute="bottom" secondItem="PWr-eM-9up" secondAttribute="top" id="wKv-nj-rcb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eMa-HK-sjc"/>
+                    <connections>
+                        <outlet property="errorHeightConstraint" destination="uck-CC-amy" id="MfG-Qc-1xZ"/>
+                        <outlet property="errorMessageLabel" destination="fmj-ix-mTN" id="sL9-df-Hq3"/>
+                        <outlet property="errorView" destination="It1-dB-py2" id="yS2-qF-geW"/>
+                        <outlet property="tableView" destination="PWr-eM-9up" id="Oc4-o5-WlN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="87.723214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uy2-vr-Tfi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ks-Rs-vXh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cZ1-RB-amL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xRB-8a-c29"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9RV-UF-qdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
